@@ -1109,3 +1109,42 @@ border-radius:15px;
     transform:scale(.98);
 
 }
+.important-note{
+    background:#fff8e1;
+    border:2px solid #f4c542;
+    border-radius:12px;
+    padding:15px;
+    margin:20px 0;
+    text-align:center;
+}
+
+.important-note h3{
+    color:#d48806;
+    margin-bottom:10px;
+}
+
+.important-note p{
+    color:#333;
+    font-size:15px;
+    line-height:1.6;
+}
+
+.payment-note{
+    background:#e8f5e9;
+    border:2px solid #4caf50;
+    border-radius:12px;
+    padding:15px;
+    margin:20px 0;
+    text-align:center;
+}
+
+.payment-note h3{
+    color:#2e7d32;
+    margin-bottom:10px;
+}
+
+.payment-note p{
+    color:#333;
+    line-height:1.6;
+    font-size:15px;
+}
