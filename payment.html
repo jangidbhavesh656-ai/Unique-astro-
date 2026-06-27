@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Payment - UNIQUE ASTRO</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<h1>Complete Payment</h1>
+
+
+<div class="payment-box">
+
+
+<h2>Buy Tokens</h2>
+
+
+<p>
+Tokens:
+<span id="token"></span>
+</p>
+
+
+<p>
+Amount:
+₹<span id="price"></span>
+</p>
+
+
+<img 
+src="uniqueastro.png"
+width="250"
+>
+
+
+<h3>UPI ID</h3>
+
+<p>
+7850910953@ibl
+</p>
+
+
+
+<form 
+action="https://formspree.io/f/mzdlryvw"
+method="POST"
+>
+
+
+<input 
+type="text"
+name="name"
+placeholder="Your Name"
+required>
+
+
+<input 
+type="tel"
+name="phone"
+placeholder="Mobile Number"
+required>
+
+
+
+
+
+<input 
+type="hidden"
+name="tokens"
+id="formTokens">
+
+
+<input 
+type="hidden"
+name="amount"
+id="formAmount">
+
+
+
+
+
+
+</form>
+
+
+
+</div>
+
+
+
+<script>
+
+
+let token =
+localStorage.getItem("tokens");
+
+
+let price =
+localStorage.getItem("price");
+
+
+document.getElementById("token").innerHTML=token;
+
+document.getElementById("price").innerHTML=price;
+
+
+document.getElementById("formTokens").value=token;
+
+document.getElementById("formAmount").value=price;
+
+
+</script>
+
+<button type="button" onclick="paymentDone()">
+Payment Done
+</button>
+
+
+<script>
+
+function paymentDone(){
+
+window.location.href="success.html";
+
+}
+
+</script>
+</body>
+
+</html>

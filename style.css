@@ -1,0 +1,1111 @@
+/* =======================================
+   UNIQUE ASTRO
+   PREMIUM COSMIC DESIGN
+======================================= */
+
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Cinzel',serif;
+    background:#050816;
+    color:#fff;
+    overflow-x:hidden;
+
+}
+
+/* =======================================
+   SPACE BACKGROUND
+======================================= */
+
+.space{
+
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    z-index:-10;
+
+    background:
+    radial-gradient(circle at top,#1a1f52,#090b18,#020308);
+
+}
+
+/* =======================================
+   STARS
+======================================= */
+
+.stars{
+
+    position:absolute;
+    width:100%;
+    height:100%;
+
+    background-image:
+
+    radial-gradient(white 1px,transparent 1px),
+    radial-gradient(white 1px,transparent 1px),
+    radial-gradient(#FFD700 1px,transparent 1px);
+
+    background-size:
+    120px 120px,
+    180px 180px,
+    250px 250px;
+
+    animation:
+    twinkle 5s infinite alternate;
+
+}
+
+@keyframes twinkle{
+
+0%{
+
+opacity:.4;
+
+}
+
+50%{
+
+opacity:1;
+
+}
+
+100%{
+
+opacity:.5;
+
+}
+
+}
+
+/* =======================================
+   PLANETS
+======================================= */
+
+.planet{
+
+position:absolute;
+border-radius:50%;
+box-shadow:0 0 40px rgba(255,255,255,.25);
+
+}
+
+/* Blue Planet */
+
+.planet1{
+
+width:90px;
+height:90px;
+
+top:12%;
+left:8%;
+
+background:
+radial-gradient(circle at 30% 30%,
+#7dd3fc,
+#2563eb,
+#0f172a);
+
+animation:
+floatPlanet 18s linear infinite;
+
+}
+
+/* Purple Planet */
+
+.planet2{
+
+width:150px;
+height:150px;
+
+bottom:10%;
+right:8%;
+
+background:
+radial-gradient(circle,
+#c084fc,
+#7c3aed,
+#2e1065);
+
+animation:
+floatPlanet 25s linear infinite reverse;
+
+}
+
+/* Golden Planet */
+
+.planet3{
+
+width:70px;
+height:70px;
+
+top:60%;
+left:70%;
+
+background:
+radial-gradient(circle,
+#fff7b2,
+#facc15,
+#ca8a04);
+
+animation:
+floatPlanet 20s linear infinite;
+
+}
+
+@keyframes floatPlanet{
+
+0%{
+
+transform:
+rotate(0deg)
+translateY(0px);
+
+}
+
+50%{
+
+transform:
+rotate(180deg)
+translateY(-25px);
+
+}
+
+100%{
+
+transform:
+rotate(360deg)
+translateY(0px);
+
+}
+
+}
+
+/* =======================================
+   ORBITS
+======================================= */
+
+.orbit{
+
+position:absolute;
+border:1px solid rgba(255,255,255,.08);
+border-radius:50%;
+
+}
+
+.orbit1{
+
+width:320px;
+height:320px;
+
+top:-80px;
+left:-80px;
+
+animation:
+rotateOrbit 30s linear infinite;
+
+}
+
+.orbit2{
+
+width:420px;
+height:420px;
+
+right:-120px;
+bottom:-120px;
+
+animation:
+rotateOrbit 45s linear infinite reverse;
+
+}
+
+.orbit3{
+
+width:250px;
+height:250px;
+
+left:60%;
+top:40%;
+
+animation:
+rotateOrbit 35s linear infinite;
+
+}
+
+@keyframes rotateOrbit{
+
+from{
+
+transform:rotate(0deg);
+
+}
+
+to{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+/* =======================================
+   HEADER
+======================================= */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:18px 25px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:rgba(0,0,0,.25);
+    backdrop-filter:blur(12px);
+
+    z-index:1000;
+}
+
+/* =======================================
+   LOGO
+======================================= */
+
+.logo h1{
+
+    font-size:32px;
+    color:#FFD700;
+
+    letter-spacing:3px;
+    font-weight:700;
+
+    text-shadow:
+    0 0 10px #FFD700,
+    0 0 20px rgba(255,215,0,.4);
+
+}
+
+/* =======================================
+   HAMBURGER MENU
+======================================= */
+
+.menu-btn{
+
+    width:40px;
+    cursor:pointer;
+
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+
+}
+
+.menu-btn span{
+
+    width:100%;
+    height:3px;
+
+    background:white;
+    border-radius:20px;
+
+    transition:.4s;
+
+}
+
+.menu-btn:hover span{
+
+    background:#FFD700;
+
+}
+
+/* =======================================
+   SIDEBAR
+======================================= */
+
+.sidebar{
+
+    position:fixed;
+
+    top:0;
+    right:-300px;
+
+    width:280px;
+    height:100vh;
+
+    background:rgba(8,10,30,.95);
+
+    backdrop-filter:blur(18px);
+
+    padding:30px;
+
+    transition:.45s ease;
+
+    z-index:2000;
+
+    border-left:1px solid rgba(255,255,255,.1);
+
+}
+
+.sidebar.active{
+
+    right:0;
+
+}
+
+.close-btn{
+
+    text-align:right;
+    font-size:28px;
+    cursor:pointer;
+    color:white;
+
+}
+
+.close-btn:hover{
+
+    color:#FFD700;
+
+}
+
+.sidebar ul{
+
+    list-style:none;
+    margin-top:50px;
+
+}
+
+.sidebar li{
+
+    margin:25px 0;
+
+}
+
+.sidebar a{
+
+    text-decoration:none;
+    color:white;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+.sidebar a:hover{
+
+    color:#FFD700;
+    padding-left:12px;
+
+}
+
+/* =======================================
+   HERO SECTION
+======================================= */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:100px 25px;
+
+}
+
+.hero-content{
+
+    max-width:700px;
+
+}
+
+.hero h2{
+
+    color:#9ca3af;
+    font-size:24px;
+    margin-bottom:10px;
+
+}
+
+.hero h1{
+
+    font-size:65px;
+
+    color:#FFD700;
+
+    margin-bottom:20px;
+
+    text-shadow:
+    0 0 20px rgba(255,215,0,.5);
+
+}
+
+.hero p{
+
+    font-size:18px;
+    line-height:1.8;
+    color:#ddd;
+
+}
+
+/* =======================================
+   BUTTON
+======================================= */
+
+.btn{
+
+    display:inline-block;
+
+    margin-top:35px;
+
+    padding:15px 40px;
+
+    text-decoration:none;
+
+    color:white;
+
+    border:2px solid #FFD700;
+
+    border-radius:40px;
+
+    transition:.4s;
+
+}
+
+.btn:hover{
+
+    background:#FFD700;
+    color:black;
+
+    box-shadow:
+    0 0 25px #FFD700;
+
+}
+
+/* =======================================
+   MOBILE RESPONSIVE
+======================================= */
+
+@media(max-width:768px){
+
+.logo h1{
+
+    font-size:24px;
+
+}
+
+.hero h1{
+
+    font-size:42px;
+
+}
+
+.hero h2{
+
+    font-size:20px;
+
+}
+
+.hero p{
+
+    font-size:16px;
+
+}
+
+.sidebar{
+
+    width:250px;
+
+}
+
+}
+
+/* =======================================
+   BUTTON RIPPLE EFFECT
+======================================= */
+
+.btn{
+    position:relative;
+    overflow:hidden;
+}
+
+.ripple{
+
+    position:absolute;
+
+    width:20px;
+    height:20px;
+
+    background:rgba(255,255,255,.7);
+
+    border-radius:50%;
+
+    transform:scale(0);
+
+    animation:ripple .6s linear;
+
+    pointer-events:none;
+
+}
+
+@keyframes ripple{
+
+    to{
+
+        transform:scale(18);
+        opacity:0;
+
+    }
+
+}
+/*=========================================
+  ASTROLOGER PROFILE SECTION
+=========================================*/
+.profile-section{
+    width:90%;
+    max-width:900px;
+    margin:80px auto;
+    padding:45px;
+    text-align:center;
+}
+
+/* Profile Image */
+.profile-img{
+    width:220px;
+    height:220px;
+    object-fit:cover;
+    border-radius:50%;
+    border:5px solid #FFD700;
+    display:block;
+    margin:0 auto 30px;
+
+    box-shadow:
+    0 0 20px rgba(255,215,0,.45),
+    0 0 40px rgba(255,215,0,.20);
+}
+
+/* Name */
+.profile-section h2{
+    color:#FFD700;
+    font-size:36px;
+    margin-bottom:25px;
+    font-weight:700;
+}
+
+/* Details */
+.profile-section ul{
+    list-style:disc;
+    text-align:left;
+    max-width:650px;
+    margin:0 auto;
+    padding-left:25px;
+}
+
+.profile-section li{
+    color:#ffffff;
+    margin-bottom:18px;
+    font-size:17px;
+}
+
+.profile-section strong{
+    color:#FFD700;
+}
+/* ==============================
+   Birth Details Section
+============================== */
+
+.birth-section{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:30px;
+
+}
+
+.birth-card{
+
+width:100%;
+max-width:550px;
+
+padding:40px;
+
+border-radius:25px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,215,0,.25);
+
+box-shadow:
+
+0 0 35px rgba(255,215,0,.15),
+
+0 0 60px rgba(255,255,255,.05);
+
+}
+
+.birth-card h2{
+
+text-align:center;
+
+color:#FFD700;
+
+margin-bottom:35px;
+
+font-size:32px;
+
+}
+
+.input-box{
+
+margin-bottom:20px;
+
+}
+
+.input-box input{
+
+width:100%;
+
+padding:15px;
+
+border-radius:12px;
+
+border:1px solid rgba(255,255,255,.15);
+
+background:rgba(255,255,255,.08);
+
+color:white;
+
+font-size:16px;
+
+outline:none;
+
+transition:.35s;
+
+}
+
+.input-box input:focus{
+
+border-color:#FFD700;
+
+box-shadow:
+
+0 0 15px rgba(255,215,0,.3);
+
+}
+
+.upload-btn{
+
+display:inline-block;
+
+padding:14px 20px;
+
+background:rgba(255,215,0,.15);
+
+border:1px solid #FFD700;
+
+border-radius:10px;
+
+cursor:pointer;
+
+color:#FFD700;
+
+transition:.3s;
+
+}
+
+.upload-btn:hover{
+
+background:#FFD700;
+
+color:#000;
+
+}
+
+#file-name{
+
+display:block;
+
+margin-top:12px;
+
+font-size:14px;
+
+color:#ddd;
+
+}
+
+.continue-btn{
+
+width:100%;
+
+padding:16px;
+
+border:none;
+
+border-radius:50px;
+
+font-size:18px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+color:#000;
+
+background:linear-gradient(
+90deg,
+#FFD700,
+#FFB800
+);
+
+transition:.35s;
+
+}
+
+.continue-btn:hover{
+
+transform:translateY(-3px);
+
+box-shadow:
+
+0 0 25px #FFD700;
+
+}
+
+@media(max-width:768px){
+
+.birth-card{
+
+padding:25px;
+
+}
+
+.birth-card h2{
+
+font-size:26px;
+
+}
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#12002b,#3a0ca3,#ff9f1c);
+    color:white;
+    padding:20px;
+}
+
+
+
+h1{
+    text-align:center;
+    margin:25px 0;
+    font-size:32px;
+}
+
+
+
+.token-card,
+.payment-box{
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(15px);
+    border-radius:20px;
+    padding:25px;
+    margin:20px auto;
+    max-width:400px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+
+
+.token-card h2{
+    margin-bottom:10px;
+}
+
+
+
+button{
+    margin-top:15px;
+    padding:12px 30px;
+    border:none;
+    border-radius:30px;
+    background:#ffd166;
+    color:#000;
+    font-size:16px;
+    cursor:pointer;
+}
+
+
+
+button:hover{
+    transform:scale(1.05);
+}
+
+
+
+input{
+    width:100%;
+    padding:13px;
+    margin:10px 0;
+    border-radius:10px;
+    border:none;
+    outline:none;
+}
+
+
+
+img{
+    border-radius:15px;
+    margin:20px;
+} 
+
+.about-section,
+.feedback-section{
+
+margin-top:50px;
+padding:30px;
+background:rgba(255,255,255,0.1);
+backdrop-filter:blur(15px);
+border-radius:20px;
+text-align:center;
+color:white;
+
+
+}
+
+.call-btn:hover{
+
+transform:scale(1.05);
+
+box-shadow:0 12px 25px rgba(255,87,34,0.6);
+
+}
+
+.call-btn:active{
+
+transform:scale(.98);
+
+}
+.token-info{
+    margin-top:20px;
+    padding:15px;
+    background:rgba(255,215,0,0.15);
+    border:1px solid #FFD700;
+    border-radius:12px;
+    color:#FFD700;
+    font-size:18px;
+    font-weight:bold;
+    text-align:center;
+}
+
+.about-section h2{
+
+margin-bottom:15px;
+
+
+.developer{
+
+margin-top:25px;
+
+}
+
+.feedback-section input,
+.feedback-section textarea,
+.feedback-section select{
+
+width:100%;
+padding:15px;
+margin-top:15px;
+border:none;
+border-radius:12px;
+font-size:16px;
+
+}
+
+.feedback-section textarea{
+
+height:120px;
+resize:none;
+
+}
+
+.feedback-section button{
+
+margin-top:20px;
+padding:15px;
+width:100%;
+border:none;
+border-radius:30px;
+background:#FFD700;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+
+}
+
+footer{
+
+margin-top:40px;
+padding:25px;
+text-align:center;
+background:#111;
+color:white;
+border-radius:15px;
+
+}
+
+.feedback-card{
+    background:rgba(255,255,255,0.12);
+    padding:15px;
+    margin:15px 0;
+    border-radius:15px;
+    color:white;
+}
+}
+
+
+
+.enquiry-box{
+    margin-top:30px;
+    padding:20px;
+    background:rgba(255,255,255,0.08);
+    border-radius:15px;
+    text-align:center;
+}
+
+.enquiry-box h3{
+    color:#FFD700;
+    margin-bottom:10px;
+}
+
+.enquiry-box p{
+    color:#ddd;
+    font-size:15px;
+}
+
+.support-number{
+    display:inline-block;
+    margin-top:10px;
+    color:#00ff99;
+    font-size:22px;
+    font-weight:bold;
+    text-decoration:none;
+}
+/* ===== Feedback Section ===== */
+
+.feedback-section{
+    max-width:700px;
+    margin:50px auto;
+    padding:30px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(15px);
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+    text-align:center;
+}
+
+.feedback-section h2{
+    color:#FFD700;
+    font-size:32px;
+    margin-bottom:25px;
+}
+
+/* Inputs */
+
+.feedback-section input,
+.feedback-section textarea,
+.feedback-section select{
+
+    width:100%;
+    padding:15px;
+    margin:12px 0;
+    border:none;
+    border-radius:12px;
+    background:#fff;
+    color:#111;
+    font-size:16px;
+    outline:none;
+    box-sizing:border-box;
+
+}
+
+.feedback-section textarea{
+
+    height:130px;
+    resize:none;
+
+}
+
+/* Submit Button */
+
+.feedback-section button{
+
+    width:100%;
+    padding:16px;
+    margin-top:15px;
+
+    background:linear-gradient(135deg,#ff9800,#ff5722);
+
+    color:#fff;
+
+    border:none;
+
+    border-radius:50px;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.feedback-section button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 20px rgba(255,87,34,.5);
+
+}
+
+.feedback-section button:active{
+
+    transform:scale(.98);
+
+}

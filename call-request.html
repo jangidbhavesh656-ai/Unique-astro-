@@ -1,0 +1,67 @@
+<script type="module">
+
+import { db } from "./firebase.js";
+
+
+import { 
+collection,
+addDoc
+}
+from 
+"https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+
+
+window.sendRequest = async function(){
+
+
+let name =
+document.getElementById("name").value;
+
+
+let phone =
+document.getElementById("phone").value;
+
+
+
+await addDoc(collection(db,"callRequests"),{
+
+
+name:name,
+
+phone:phone,
+
+status:"pending",
+
+
+createdAt:new Date()
+
+
+});
+
+
+alert("Call request sent");
+
+
+}
+
+
+</script>
+
+
+</script> 
+
+<div class="call-box">
+
+<h2>📞 Consultation Call</h2>
+
+<p>Please call on the number below to start your consultation.</p>
+
+<h1>+91 7877687083</h1>
+
+<a href="tel:+91 7877687083" class="call-btn">
+kindly requested to you open your dial pad and paste the number and call on it 
+if you face any problem send a mail on jangidbhavesh656@gmail.com
+</a>
+
+</div>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Buy Tokens</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+<h1>Buy Consultation Tokens</h1>
+
+
+<div class="token-card">
+
+<h2>50 Tokens</h2>
+<p>₹49</p>
+
+<button onclick="buyToken('50','49')">
+Buy Now
+</button>
+
+</div>
+
+
+
+<div class="token-card">
+
+<h2>100 Tokens</h2>
+<p>₹99</p>
+
+<button onclick="buyToken('100','99')">
+Buy Now
+</button>
+
+</div>
+
+
+
+<div class="token-card">
+
+<h2>250 Tokens</h2>
+<p>₹199</p>
+
+<button onclick="buyToken('250','199')">
+Buy Now
+</button>
+
+</div>
+
+
+
+<div class="token-card">
+
+<h2>500 Tokens</h2>
+<p>₹399</p>
+
+<button onclick="buyToken('500','399')">
+Buy Now
+</button>
+
+</div>
+
+
+
+<div class="token-card">
+
+<h2>1000 Tokens</h2>
+<p>₹699</p>
+
+<button onclick="buyToken('1000','699')">
+Buy Now
+</button>
+
+</div>
+
+
+
+<script>
+
+function buyToken(token,price){
+
+localStorage.setItem("tokens",token);
+localStorage.setItem("price",price);
+
+window.location.href="payment.html";
+
+}
+
+</script>
+
+
+</body>
+
+</html>

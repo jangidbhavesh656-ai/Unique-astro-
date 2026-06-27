@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Online Call - UNIQUE ASTRO</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<h1>Online Consultation</h1>
+
+
+<video id="localVideo" autoplay muted playsinline></video>
+
+<video id="remoteVideo" autoplay playsinline></video>
+
+
+<br>
+
+
+<button onclick="startCall()">
+Start Call
+</button>
+
+
+<button onclick="endCall()">
+End Call
+</button>
+
+
+
+<script>
+
+
+let localStream;
+
+
+
+async function startCall(){
+
+
+localStream = await navigator.mediaDevices.getUserMedia({
+
+video:true,
+audio:true
+
+});
+
+
+document.getElementById("localVideo").srcObject =
+localStream;
+
+
+alert("Camera and Mic started");
+
+
+}
+
+
+
+
+
+function endCall(){
+
+
+if(localStream){
+
+localStream.getTracks().forEach(track=>track.stop());
+
+}
+
+
+alert("Call ended");
+
+
+}
+
+
+
+</script>
+
+
+</body>
+
+</html>

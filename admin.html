@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Astrologer Panel</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<h1>Call Requests</h1>
+
+
+<div id="requests">
+
+Loading...
+
+</div>
+
+
+
+<script type="module">
+
+
+import { db } from "./firebase.js";
+
+
+import {
+
+collection,
+onSnapshot,
+doc,
+updateDoc
+
+}
+
+from
+
+"https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+
+
+
+
+const box =
+document.getElementById("requests");
+
+
+
+onSnapshot(
+collection(db,"callRequests"),
+
+(snapshot)=>{
+
+
+box.innerHTML="";
+
+
+
+snapshot.forEach((item)=>{
+
+
+let data=item.data();
+
+
+
+box.innerHTML += `
+
+
+<div class="payment-box">
+
+
+<h3>
+${data.name}
+</h3>
+
+
+<p>
+${data.phone}
+</p>
+
+
+<p>
+Status: ${data.status}
+</p>
+
+
+
+<button onclick="acceptCall('${item.id}')">
+
+Accept Call
+
+</button>
+
+
+</div>
+
+
+`;
+
+
+});
+
+
+});
+
+
+
+
+
+window.acceptCall = async function(id){
+
+
+
+await updateDoc(
+
+doc(db,"callRequests",id),
+
+{
+
+status:"accepted"
+
+}
+
+);
+
+
+
+window.location.href="call-room.html";
+
+
+}
+
+
+
+</script>
+
+
+
+</body>
+
+</html>

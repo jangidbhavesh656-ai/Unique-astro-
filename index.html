@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIQUE ASTRO</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<body>
+
+<!-- ================================= -->
+<!-- SPACE BACKGROUND -->
+<!-- ================================= -->
+
+<div class="space">
+
+    <!-- Stars -->
+    <div class="stars"></div>
+
+    <!-- Planets -->
+    <div class="planet planet1"></div>
+    <div class="planet planet2"></div>
+    <div class="planet planet3"></div>
+
+    <!-- Orbits -->
+    <div class="orbit orbit1"></div>
+    <div class="orbit orbit2"></div>
+    <div class="orbit orbit3"></div>
+
+</div>
+
+<!-- ================================= -->
+<!-- HEADER -->
+<!-- ================================= -->
+
+<header>
+
+<div class="logo">
+
+<h1>UNIQUE ASTRO</h1>
+
+</div>
+
+<div class="menu-btn" id="menuBtn">
+
+<span></span>
+<span></span>
+<span></span>
+
+</div>
+
+</header>
+
+<!-- ================================= -->
+<!-- SIDEBAR -->
+<!-- ================================= -->
+
+<nav class="sidebar" id="sidebar">
+
+<div class="close-btn" id="closeBtn">
+
+<i class="fa-solid fa-xmark"></i>
+
+</div>
+
+<ul>
+
+<li><a href="#"><i class="fa-solid fa-user"></i> My Account</a></li>
+
+<li><a href="#"><i class="fa-solid fa-coins"></i> Buy Tokens</a></li>
+
+<li><a href="#"><i class="fa-solid fa-clock-rotate-left"></i> Consult History</a></li>
+
+<li><a href="#"><i class="fa-solid fa-headset"></i> Support</a></li>
+
+</ul>
+
+</nav>
+
+<!-- ================================= -->
+<!-- HERO SECTION -->
+<!-- ================================= -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h2>Welcome to</h2>
+
+<h1>UNIQUE ASTRO</h1>
+
+<p>
+
+Unlock the mysteries of the universe with
+ancient Vedic wisdom, accurate predictions,
+and premium astrology consultations.
+
+</p>
+
+<a href="#" class="btn">
+
+Get Started
+
+</a>
+
+</div>
+
+</section>
+
+<!-- ================================= -->
+<!-- SCRIPT -->
+<!-- ================================= -->
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
+<!-- ==========================
+     ASTROLOGER PROFILE SECTION
+========================== -->
+<img src="IMG_20260626_171956.jpg"
+     alt="Aacharya Bhupendra Sharma"
+     class="profile-img">
+
+<section class="astrologer-profile">
+
+    <div class="container">
+
+        <div class="profile-card">
+
+            
+            >
+
+            <div class="profile-content">
+
+                <h2>Aacharya Bhupendra Sharma</h2>
+
+                <ul class="profile-details">
+
+                    <li>
+                        <strong>Qualifications:</strong>
+                        Masters and Bachelors from Central Sanskrit University, Jaipur
+                    </li>
+
+                    <li>
+                        <strong>Experience:</strong>
+                        11+ years of expert astrology consultation
+                    </li>
+
+                    <li>
+                        <strong>Work History:</strong>
+                        Ex-Astrologer at AstroTalk, GaneshaSpeaks, InstaAstro
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<form action="https://formspree.io/f/mzdlryvw" method="POST">
+
+<input type="text" name="name" placeholder="Full Name" required>
+
+<input type="date" name="dob" required>
+
+<input type="time" name="birth_time" required>
+
+<input type="text" name="birth_place" placeholder="Birth Place" required>
+
+
+</form>
+
+</section>
+<script src="script.js"></script>
+<script type="module" src="firebase.js"></script>
+<button onclick="goToTokens()">Continue</button>
+
+<script>
+function goToTokens(){
+    window.location.href="tokens.html";
+}
+</script>
+</body>
+
+</html>
+<p class="token-info">
+🪙 <strong>Consultation Charges:</strong> 12 Tokens per Minute
+</p>
+<!-- ABOUT SECTION -->
+
+<section class="about-section">
+
+<h2>🌟 About UNIQUE ASTRO</h2>
+
+<p>
+UNIQUE ASTRO is a trusted Vedic Astrology platform where users can
+consult experienced astrologers for Kundli Analysis, Career,
+Marriage, Love, Business, Health and Life Guidance.
+</p>
+
+<div class="developer">
+
+<h3>Founder & Developer</h3>
+
+<h2>Bhavesh Jangid</h2>
+
+<p>
+Designed & Developed with ❤️ for making Astrology simple and
+professional.
+</p>
+
+</div>
+
+</section>
+
+<section class="feedback-section">
+
+<h2>⭐ Give Your Feedback</h2>
+
+<form action="https://formspree.io/f/mzdlryvw" method="POST">
+
+<input
+type="text"
+name="Name"
+placeholder="Your Name"
+required>
+
+<textarea
+name="Feedback"
+placeholder="Write your feedback..."
+required></textarea>
+
+<select name="Rating">
+<option>⭐⭐⭐⭐⭐</option>
+<option>⭐⭐⭐⭐</option>
+<option>⭐⭐⭐</option>
+<option>⭐⭐</option>
+<option>⭐</option>
+</select>
+
+<input
+type="hidden"
+name="Form Type"
+value="Website Feedback">
+
+<button type="submit">
+Submit Feedback
+</button>
+
+</form>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+
+© 2026 UNIQUE ASTRO
+
+</p>
+
+<p>
+
+Founder & Developer :
+<b>Bhavesh Jangid</b>
+
+</p>
+
+</footer>
+
+
+<div id="feedbackList"></div>
+
+
+
+<div class="enquiry-box">
+    <h3>📞 Enquiry & Support</h3>
+    <p>For any enquiry or payment issue, contact us:</p>
+
+    <a href="tel:+917850910953" class="support-number">
+        +91 78509 10953
+    </a>
+</div>
+    ...
+</div>
+
+<script type="module" src="./script.js"></script>
+</body>
+</html>
+
