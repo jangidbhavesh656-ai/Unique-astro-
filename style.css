@@ -1196,3 +1196,22 @@ border-radius:15px;
 .offer-box button:hover{
     background:#e68900;
    }
+.offer-box{
+    color: #222;
+}
+
+.offer-box h2{
+    color: #d35400;
+}
+
+.offer-box p{
+    color: #222;
+}
+
+.offer-box strong{
+    color: #000;
+}
+
+.offer-box button{
+    color: #fff;
+}
