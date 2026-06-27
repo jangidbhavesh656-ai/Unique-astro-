@@ -184,13 +184,30 @@ Get Started
 
 <input type="text" name="birth_place" placeholder="Birth Place" required>
 
+    
+<button type="submit">Continue</button>
+
+</form>
+<div class="important-note">
+    <h3>📢 Important Notice</h3>
+    <p>
+        Please click the <strong>Continue</strong> button first to submit your birth details.
+        Once your details have been successfully received by our team, click the
+        <strong>Call Now</strong> button to start your consultation.
+    </p>
+    <p style="color:red;">
+        <strong>Note:</strong> If you skip the Continue step, your birth details will not be received.
+    </p>
+</div>
+
+</form>
 
 </form>
 
 </section>
 <script src="script.js"></script>
 <script type="module" src="firebase.js"></script>
-<button onclick="goToTokens()">Continue</button>
+<button onclick="goToTokens()">Call now</button>
 
 <script>
 function goToTokens(){
@@ -203,6 +220,19 @@ function goToTokens(){
 <p class="token-info">
 🪙 <strong>Consultation Charges:</strong> 12 Tokens per Minute
 </p>
+<div class="payment-note">
+    <h3>📢 Payment Information</h3>
+    <p>
+        After completing your payment, our team will verify your transaction.
+        Once verified, your consultation tokens will be updated manually and a
+        confirmation message with your updated token balance will be sent to your
+        WhatsApp number.
+    </p>
+
+    <p style="color:#d32f2f;">
+        <strong>Note:</strong> Please keep your payment screenshot or transaction ID until your tokens are updated.
+    </p>
+</div>
 <!-- ABOUT SECTION -->
 
 <section class="about-section">
