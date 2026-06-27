@@ -1148,3 +1148,51 @@ border-radius:15px;
     line-height:1.6;
     font-size:15px;
 }
+
+.offer-box{
+    max-width:400px;
+    margin:25px auto;
+    padding:20px;
+    background:#fff8e6;
+    border:2px solid #ff9800;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.offer-box h2{
+    color:#d35400;
+    margin-bottom:10px;
+}
+
+.offer-box p{
+    margin:10px 0;
+    font-size:16px;
+}
+
+.limited{
+    color:red;
+    font-weight:bold;
+    animation:blink 1s infinite;
+}
+
+@keyframes blink{
+    50%{
+        opacity:.4;
+    }
+}
+
+.offer-box button{
+    margin-top:15px;
+    padding:12px 20px;
+    background:#ff9800;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.offer-box button:hover{
+    background:#e68900;
+   }
